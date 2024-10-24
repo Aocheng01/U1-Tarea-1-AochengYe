@@ -21,50 +21,46 @@ namespace U1_Tarea_1___AochengYe
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-
-
-            if (txtBoxTitulo.Text.Length < 1 | txtBoxAutor.Text.Length < 1)
+            bool datosValidos = true;
+            if (txtBoxTitulo.Text.Length < 1)
             {
                 MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
-
-            }
-            if (txtBoxTitulo.Text.Length < 1) { 
                 txtBoxTitulo.BackColor = Color.Red;
+                datosValidos = false;
             }
-            if (txtBoxAutor.Text.Length < 1) { 
+            if (txtBoxAutor.Text.Length < 1)
+            {
+                MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
                 txtBoxAutor.BackColor = Color.Red;
+                datosValidos = false;
             }
-
             DateTime fechaPublicacion;
             bool fechaValida = DateTime.TryParse(txtBoxFchaPublicacion.Text, out fechaPublicacion);
-
             if (!fechaValida)
             {
                 MessageBox.Show("Formato de fecha incorrecto. Por favor, ingrese una fecha válida.");
                 txtBoxFchaPublicacion.BackColor = Color.Red;
-                return;
+                datosValidos = false;
             }
-
-            Libro nuevoLibro = new Libro(
-                txtBoxTitulo.Text,
-                txtBoxAutor.Text,
-                txtBoxEditorial.Text,
-                fechaPublicacion,
-                txtBoxImagen.Text,
-                txtBoxDescripcion.Text,
-                float.Parse(txtBoxPrecio.Text),
-                int.Parse(txtBoxUnidades.Text),
-                checkBoxEnVenta.Checked
-            );
-            
-            if (txtBoxTitulo.Text.Length < 1 && txtBoxAutor.Text.Length < 1 && fechaValida)
+            if (datosValidos)
             {
+                Libro nuevoLibro = new Libro(
+                    txtBoxTitulo.Text,
+                    txtBoxAutor.Text,
+                    txtBoxEditorial.Text,
+                    fechaPublicacion,
+                    txtBoxImagen.Text,
+                    txtBoxDescripcion.Text,
+                    float.Parse(txtBoxPrecio.Text),
+                    int.Parse(txtBoxUnidades.Text),
+                    checkBoxEnVenta.Checked
+                );
                 DaoLibro daoLibro = new DaoLibro();
                 daoLibro.insertarLibro(nuevoLibro);
-
+                MessageBox.Show("Libro añadido correctamente.");
             }
-            
         }
+
 
         private void txtBoxAutor_MouseDown(object sender, MouseEventArgs e)
         {
