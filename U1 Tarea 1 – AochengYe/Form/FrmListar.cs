@@ -23,25 +23,26 @@ namespace U1_Tarea_1___AochengYe
         {
             DaoLibro daoLibro = new DaoLibro();
             List<Libro> listaLibros = daoLibro.listarLibros();
-
-
-            listView1.Clear();
-            listView1.View = View.Details;
-            listView1.Columns.Add("Título", 150);
-            listView1.Columns.Add("Autor", 150);
-            listView1.Columns.Add("Editorial", 150);
-                  
-            foreach (Libro libro in listaLibros)
-            {
-                ListViewItem item = new ListViewItem(libro.titulo);
-                item.SubItems.Add(libro.autor);
-                item.SubItems.Add(libro.editorial);
-
-                listView1.Items.Add(item);
-            }
-
+            dataGridView1.DataSource = listaLibros;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
 
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                txtBoxTitulo.Text = selectedRow.Cells["titulo"].Value.ToString();
+                txtBoxAutor.Text = selectedRow.Cells["autor"].Value.ToString();
+                txtBoxEditorial.Text = selectedRow.Cells["editorial"].Value.ToString();
+                txtBoxFchaPublicacion.Text = selectedRow.Cells["fecha_publicacion"].Value.ToString();
+                txtBoxImagen.Text = selectedRow.Cells["imagen"].Value.ToString();
+                txtBoxDescripcion.Text = selectedRow.Cells["descripcion"].Value.ToString();
+                txtBoxPrecio.Text = selectedRow.Cells["precio"].Value.ToString();
+                txtBoxUnidades.Text = selectedRow.Cells["unidades"].Value.ToString();
+                checkBoxEnVenta.Checked = (bool)selectedRow.Cells["enVenta"].Value;
+            }
+        }
     }
 }
