@@ -76,6 +76,11 @@ namespace U1_Tarea_1___AochengYe
         {
             txtBoxFchaPublicacion.BackColor = Color.White;
         }
+
+        private void FrmAnnadir_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

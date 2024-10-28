@@ -1,6 +1,6 @@
 ﻿namespace U1_Tarea_1___AochengYe
 {
-    partial class FrmAnnadir
+    partial class FrmModificar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEnviar = new System.Windows.Forms.Button();
             this.txtBoxUnidades = new System.Windows.Forms.TextBox();
             this.txtBoxPrecio = new System.Windows.Forms.TextBox();
             this.txtBoxDescripcion = new System.Windows.Forms.TextBox();
@@ -48,13 +47,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.btnEnviar);
             this.panel1.Controls.Add(this.txtBoxUnidades);
             this.panel1.Controls.Add(this.txtBoxPrecio);
             this.panel1.Controls.Add(this.txtBoxDescripcion);
@@ -74,21 +78,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 310);
+            this.panel1.Location = new System.Drawing.Point(0, 410);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1992, 798);
-            this.panel1.TabIndex = 0;
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(1546, 109);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(363, 672);
-            this.btnEnviar.TabIndex = 1;
-            this.btnEnviar.Text = "Añadir Libro";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.panel1.Size = new System.Drawing.Size(1970, 642);
+            this.panel1.TabIndex = 1;
             // 
             // txtBoxUnidades
             // 
@@ -125,7 +118,6 @@
             this.txtBoxFchaPublicacion.Name = "txtBoxFchaPublicacion";
             this.txtBoxFchaPublicacion.Size = new System.Drawing.Size(234, 26);
             this.txtBoxFchaPublicacion.TabIndex = 14;
-            this.txtBoxFchaPublicacion.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxFchaPublicacion_MouseDown);
             // 
             // txtBoxEditorial
             // 
@@ -140,7 +132,6 @@
             this.txtBoxAutor.Name = "txtBoxAutor";
             this.txtBoxAutor.Size = new System.Drawing.Size(710, 26);
             this.txtBoxAutor.TabIndex = 12;
-            this.txtBoxAutor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxAutor_MouseDown);
             // 
             // txtBoxTitulo
             // 
@@ -148,7 +139,6 @@
             this.txtBoxTitulo.Name = "txtBoxTitulo";
             this.txtBoxTitulo.Size = new System.Drawing.Size(444, 26);
             this.txtBoxTitulo.TabIndex = 11;
-            this.txtBoxTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxTitulo_MouseDown);
             // 
             // checkBoxEnVenta
             // 
@@ -251,19 +241,71 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos Libro";
             // 
-            // FrmAnnadir
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(448, 19);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(284, 90);
+            this.btnModificar.TabIndex = 1;
+            this.btnModificar.Text = "Modificar libro";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(33, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 33);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "ID:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.btnModificar);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Location = new System.Drawing.Point(0, 248);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1974, 123);
+            this.panel2.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(91, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 50);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(91, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 26);
+            this.textBox1.TabIndex = 19;
+            // 
+            // FrmModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1992, 1108);
+            this.ClientSize = new System.Drawing.Size(1970, 1052);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmAnnadir";
-            this.Text = "frmAnnadir";
-            this.Load += new System.EventHandler(this.FrmAnnadir_Load);
+            this.Name = "FrmModificar";
+            this.Text = "FrmModificar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -271,6 +313,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtBoxUnidades;
+        private System.Windows.Forms.TextBox txtBoxPrecio;
+        private System.Windows.Forms.TextBox txtBoxDescripcion;
+        private System.Windows.Forms.TextBox txtBoxImagen;
+        private System.Windows.Forms.TextBox txtBoxFchaPublicacion;
+        private System.Windows.Forms.TextBox txtBoxEditorial;
+        private System.Windows.Forms.TextBox txtBoxAutor;
+        private System.Windows.Forms.TextBox txtBoxTitulo;
         private System.Windows.Forms.CheckBox checkBoxEnVenta;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -281,14 +331,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBoxUnidades;
-        private System.Windows.Forms.TextBox txtBoxPrecio;
-        private System.Windows.Forms.TextBox txtBoxDescripcion;
-        private System.Windows.Forms.TextBox txtBoxImagen;
-        private System.Windows.Forms.TextBox txtBoxFchaPublicacion;
-        private System.Windows.Forms.TextBox txtBoxEditorial;
-        private System.Windows.Forms.TextBox txtBoxAutor;
-        private System.Windows.Forms.TextBox txtBoxTitulo;
-        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

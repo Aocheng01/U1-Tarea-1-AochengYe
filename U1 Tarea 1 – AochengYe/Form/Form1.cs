@@ -26,6 +26,7 @@
         public FormularioPrincipal()
         {
             InitializeComponent();
+            this.ClientSize = new System.Drawing.Size(1499, 905);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -92,6 +93,26 @@
         {
             AbrirFormEnPanel(new FrmListar());
 
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FrmModificar());
         }
     }
 }

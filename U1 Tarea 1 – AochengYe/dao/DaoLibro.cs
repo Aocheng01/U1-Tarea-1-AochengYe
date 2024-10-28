@@ -71,8 +71,8 @@ namespace U1_Tarea_1___AochengYe.dao
                 {
                     Libro libro = new Libro(reader.GetString(1), 
                                             reader.GetString(2), 
-                                        reader.GetString(3),
-                                                reader.GetDateTime(4),
+                                            reader.GetString(3),
+                                            reader.GetDateTime(4),
                                             reader.GetString(5),
                                             reader.GetString(6),
                                             reader.GetFloat(7),
@@ -83,8 +83,6 @@ namespace U1_Tarea_1___AochengYe.dao
                 }
                 reader.Close();
                 objetoConexion.cerrarConexion();
-                
-                
             }
             catch (Exception e)
             {
@@ -93,8 +91,34 @@ namespace U1_Tarea_1___AochengYe.dao
 
             return libros;
         }
-        
-        
-        
+
+
+        private void updateLibro()
+        {
+            List<Libro> libros = new List<Libro>();
+
+            try
+            {
+                string query = "Update catalogo set libro ";
+                Conexion objetoConexion = new Conexion();
+                MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
+
+                MySqlDataReader reader = myCommand.ExecuteReader();
+
+      
+
+     
+            }
+            catch (Exception ex)
+            {
+                // Ops, maybe the id doesn't exists ?
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+
+
     }
 }
