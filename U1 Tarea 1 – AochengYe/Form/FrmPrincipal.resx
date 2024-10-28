@@ -121,6 +121,6 @@
     <value>Se le ofrece al usuario un listado completo de los libros del catálogo del centro facilitándole el título, autor y editorial. Puede seleccionar cualquier libro del listado para obtener su información completa.</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Permite al usuario buscar libros en el catálogo por título o por ID. Al buscar por título, puede introducir el título completo o parcial, y verá una lista de libros que coincidan, junto con su ID. Al buscar por ID, se mostrarán todas las ID disponibles, y podrá seleccionar una para ver la información completa del libro.</value>
+    <value>Permite al  usuario buscar libros en el catálogo por título o por ID. Al buscar por título, puede introducir el título completo o parcial, y verá una lista de libros que coincidan, junto con su ID. Al buscar por ID, se mostrarán todas las ID disponibles, y podrá seleccionar una para ver la información completa del libro.</value>
   </data>
 </root>

@@ -26,5 +26,10 @@ namespace U1_Tarea_1___AochengYe
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
