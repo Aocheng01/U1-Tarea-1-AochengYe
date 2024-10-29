@@ -32,6 +32,7 @@ namespace U1_Tarea_1___AochengYe
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Otra forma pero no se selecciona en cualquier cell.
             //if (dataGridView1.SelectedRows.Count > 0)
             //{
             //    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
