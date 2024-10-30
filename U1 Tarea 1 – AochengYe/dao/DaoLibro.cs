@@ -98,14 +98,18 @@ namespace U1_Tarea_1___AochengYe.dao
 
         public Libro buscarLibro(int id)
         {
-            Libro libro = new Libro();
-
+            Libro libro = null;
+          
+            
             try { 
-                string query = "SELECT * FROM catalogo WHERE id =" + id;
+                
+                string query = "SELECT * FROM catalogo WHERE id = @id";
 
+                
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-
+                myCommand.Parameters.AddWithValue("@id", id);
+                
                 MySqlDataReader reader = myCommand.ExecuteReader();
                 while (reader.Read()) {
                     libro = new Libro(reader.GetString(1),
@@ -119,6 +123,7 @@ namespace U1_Tarea_1___AochengYe.dao
                                       reader.GetBoolean(9)
                                                             );
                 };
+                reader.Close();
                 objetoConexion.cerrarConexion();
 
             }
@@ -175,6 +180,23 @@ namespace U1_Tarea_1___AochengYe.dao
             }
         }
 
+        public void eliminarLibro(int id, Libro libro)
+        {
+            try
+            {
+                string query = "DELETE FROM catalogo WHERE id = @id";
+                Conexion objetoConexion = new Conexion();
+                MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
+                
+                myCommand.Parameters.AddWithValue("@id", id);
+                MySqlDataReader reader = myCommand.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro al eliminar el libro." + ex);
+            }
+        }
 
 
 

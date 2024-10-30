@@ -17,6 +17,7 @@ namespace U1_Tarea_1___AochengYe
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormularioPrincipal());
+
         }
     }
 }

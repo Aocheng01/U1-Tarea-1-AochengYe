@@ -12,13 +12,12 @@ using U1_Tarea_1___AochengYe.dto;
 
 namespace U1_Tarea_1___AochengYe
 {
-    public partial class FrmModificar : Form
+    public partial class FrmEliminar : Form
     {
-        public FrmModificar()
+        public FrmEliminar()
         {
             InitializeComponent();
         }
-
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -46,25 +45,35 @@ namespace U1_Tarea_1___AochengYe
                     checkBoxEnVenta.Checked = true;
                 }
             }
-
-
         }
-        private void btnModificar_Click(object sender, EventArgs e)
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             DaoLibro daoLibro = new DaoLibro();
+
             bool enventaEstado = false;
             if (checkBoxEnVenta.Checked)
             {
                 enventaEstado = true;
             }
-            Libro libroNuevo = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text, fechaPublicacionPicker.Value, txtBoxImagen.Text, txtBoxDescripcion.Text, float.Parse(txtBoxPrecio.Text), int.Parse(txtBoxUnidades.Text), enventaEstado);
+            
+            Libro libroAEliminar = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text,
+                fechaPublicacionPicker.Value, txtBoxImagen.Text, txtBoxDescripcion.Text, float.Parse(txtBoxPrecio.Text),
+                int.Parse(txtBoxUnidades.Text), enventaEstado);
+            daoLibro.eliminarLibro(int.Parse(txtBoxID.Text), libroAEliminar);
+            MessageBox.Show("Libro eliminado con éxito");
 
-            daoLibro.modificarLibro(int.Parse(txtBoxID.Text), libroNuevo);
-
-
+            txtBoxID.Clear();
+            txtBoxTitulo.Clear();
+            txtBoxPrecio.Clear();
+            txtBoxDescripcion.Clear();
+            txtBoxEditorial.Clear();
+            fechaPublicacionPicker.Value = DateTime.Now;
+            txtBoxImagen.Clear();
+            txtBoxUnidades.Clear();
+            txtBoxAutor.Clear();
+            checkBoxEnVenta.CheckState=CheckState.Unchecked;
 
         }
-
-
     }
 }

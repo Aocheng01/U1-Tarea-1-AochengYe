@@ -131,6 +131,18 @@
     <Compile Include="Form\FrmModificar.Designer.cs">
       <DependentUpon>FrmModificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FrmConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmConsultar.Designer.cs">
+      <DependentUpon>FrmConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmEliminar.Designer.cs">
+      <DependentUpon>FrmEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\Form1.resx">
@@ -138,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmAnnadir.resx">
       <DependentUpon>FrmAnnadir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmConsultar.resx">
+      <DependentUpon>FrmConsultar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -147,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmModificar.resx">
       <DependentUpon>FrmModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmEliminar.resx">
+      <DependentUpon>FrmEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

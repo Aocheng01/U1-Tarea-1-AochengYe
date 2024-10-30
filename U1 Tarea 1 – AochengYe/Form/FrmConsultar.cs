@@ -12,13 +12,12 @@ using U1_Tarea_1___AochengYe.dto;
 
 namespace U1_Tarea_1___AochengYe
 {
-    public partial class FrmModificar : Form
+    public partial class FrmConsultar : Form
     {
-        public FrmModificar()
+        public FrmConsultar()
         {
             InitializeComponent();
         }
-
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -46,25 +45,6 @@ namespace U1_Tarea_1___AochengYe
                     checkBoxEnVenta.Checked = true;
                 }
             }
-
-
         }
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            DaoLibro daoLibro = new DaoLibro();
-            bool enventaEstado = false;
-            if (checkBoxEnVenta.Checked)
-            {
-                enventaEstado = true;
-            }
-            Libro libroNuevo = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text, fechaPublicacionPicker.Value, txtBoxImagen.Text, txtBoxDescripcion.Text, float.Parse(txtBoxPrecio.Text), int.Parse(txtBoxUnidades.Text), enventaEstado);
-
-            daoLibro.modificarLibro(int.Parse(txtBoxID.Text), libroNuevo);
-
-
-
-        }
-
-
     }
 }

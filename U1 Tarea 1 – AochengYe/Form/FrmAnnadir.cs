@@ -22,13 +22,13 @@ namespace U1_Tarea_1___AochengYe
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             bool datosValidos = true;
-            if (txtBoxTitulo.Text.Length < 1)
+            if (string.IsNullOrEmpty(txtBoxTitulo.Text))
             {
                 MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
                 txtBoxTitulo.BackColor = Color.Red;
                 datosValidos = false;
             }
-            if (txtBoxAutor.Text.Length < 1)
+            if (string.IsNullOrEmpty(txtBoxAutor.Text))
             {
                 MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
                 txtBoxAutor.BackColor = Color.Red;
@@ -50,7 +50,6 @@ namespace U1_Tarea_1___AochengYe
                 );
                 DaoLibro daoLibro = new DaoLibro();
                 daoLibro.insertarLibro(nuevoLibro);
-                MessageBox.Show("Libro añadido correctamente.");
             }
         }
 

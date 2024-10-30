@@ -31,6 +31,7 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            AbrirFormEnPanel(new FrmPrincipal());
         }
 
         private void btnMaxi_Click(object sender, EventArgs e)
@@ -97,12 +98,12 @@
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-
+            AbrirFormEnPanel(new FrmConsultar());
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            AbrirFormEnPanel(new FrmEliminar());
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

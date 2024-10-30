@@ -1,6 +1,6 @@
 ﻿namespace U1_Tarea_1___AochengYe
 {
-    partial class FrmModificar
+    partial class FrmEliminar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtBoxTituloBuscar = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBoxID = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.fechaPublicacionPicker = new System.Windows.Forms.DateTimePicker();
             this.txtBoxUnidades = new System.Windows.Forms.TextBox();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.txtBoxPrecio = new System.Windows.Forms.TextBox();
             this.txtBoxDescripcion = new System.Windows.Forms.TextBox();
             this.txtBoxImagen = new System.Windows.Forms.TextBox();
@@ -48,22 +54,80 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtBoxTituloBuscar = new System.Windows.Forms.TextBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBoxID = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.txtBoxTituloBuscar);
+            this.panel2.Controls.Add(this.lblTitulo);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.txtBoxID);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Location = new System.Drawing.Point(0, 129);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1316, 80);
+            this.panel2.TabIndex = 22;
+            // 
+            // txtBoxTituloBuscar
+            // 
+            this.txtBoxTituloBuscar.Location = new System.Drawing.Point(89, 54);
+            this.txtBoxTituloBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBoxTituloBuscar.Name = "txtBoxTituloBuscar";
+            this.txtBoxTituloBuscar.Size = new System.Drawing.Size(105, 20);
+            this.txtBoxTituloBuscar.TabIndex = 22;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(22, 51);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(64, 23);
+            this.lblTitulo.TabIndex = 21;
+            this.lblTitulo.Text = "Título: ";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(250, 46);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(103, 32);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBoxID
+            // 
+            this.txtBoxID.Location = new System.Drawing.Point(89, 16);
+            this.txtBoxID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBoxID.Name = "txtBoxID";
+            this.txtBoxID.Size = new System.Drawing.Size(105, 20);
+            this.txtBoxID.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(24, 12);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 23);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "ID:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.fechaPublicacionPicker);
             this.panel1.Controls.Add(this.txtBoxUnidades);
-            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.txtBoxPrecio);
             this.panel1.Controls.Add(this.txtBoxDescripcion);
             this.panel1.Controls.Add(this.txtBoxImagen);
@@ -81,11 +145,11 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 267);
+            this.panel1.Location = new System.Drawing.Point(0, 228);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1313, 417);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(1297, 417);
+            this.panel1.TabIndex = 21;
             // 
             // fechaPublicacionPicker
             // 
@@ -103,17 +167,17 @@
             this.txtBoxUnidades.Size = new System.Drawing.Size(117, 20);
             this.txtBoxUnidades.TabIndex = 18;
             // 
-            // btnModificar
+            // btnEliminar
             // 
-            this.btnModificar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(743, 332);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(189, 58);
-            this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar libro";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnEliminar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(711, 332);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(189, 58);
+            this.btnEliminar.TabIndex = 1;
+            this.btnEliminar.Text = "Eliminar libro";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtBoxPrecio
             // 
@@ -275,94 +339,37 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos Libro";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(24, 12);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 23);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "ID:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.txtBoxTituloBuscar);
-            this.panel2.Controls.Add(this.lblTitulo);
-            this.panel2.Controls.Add(this.btnBuscar);
-            this.panel2.Controls.Add(this.txtBoxID);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(0, 161);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1316, 80);
-            this.panel2.TabIndex = 20;
-            // 
-            // txtBoxTituloBuscar
-            // 
-            this.txtBoxTituloBuscar.Location = new System.Drawing.Point(89, 54);
-            this.txtBoxTituloBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBoxTituloBuscar.Name = "txtBoxTituloBuscar";
-            this.txtBoxTituloBuscar.Size = new System.Drawing.Size(105, 20);
-            this.txtBoxTituloBuscar.TabIndex = 22;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(22, 51);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(64, 23);
-            this.lblTitulo.TabIndex = 21;
-            this.lblTitulo.Text = "Título: ";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(250, 46);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(103, 32);
-            this.btnBuscar.TabIndex = 20;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtBoxID
-            // 
-            this.txtBoxID.Location = new System.Drawing.Point(89, 16);
-            this.txtBoxID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBoxID.Name = "txtBoxID";
-            this.txtBoxID.Size = new System.Drawing.Size(105, 20);
-            this.txtBoxID.TabIndex = 19;
-            // 
-            // FrmModificar
+            // FrmEliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1313, 684);
+            this.ClientSize = new System.Drawing.Size(1297, 645);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmModificar";
-            this.Text = "FrmModificar";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Name = "FrmEliminar";
+            this.Text = "FrmEliminar";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtBoxTituloBuscar;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBoxID;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker fechaPublicacionPicker;
         private System.Windows.Forms.TextBox txtBoxUnidades;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtBoxPrecio;
         private System.Windows.Forms.TextBox txtBoxDescripcion;
         private System.Windows.Forms.TextBox txtBoxImagen;
@@ -379,13 +386,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBoxID;
-        private System.Windows.Forms.DateTimePicker fechaPublicacionPicker;
-        private System.Windows.Forms.TextBox txtBoxTituloBuscar;
-        private System.Windows.Forms.Label lblTitulo;
     }
 }
