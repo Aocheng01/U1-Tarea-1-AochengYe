@@ -71,7 +71,8 @@ namespace U1_Tarea_1___AochengYe.dao
                 MySqlDataReader reader = myCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    Libro libro = new Libro(reader.GetString(1), 
+                    Libro libro = new Libro(reader.GetInt16(0),
+                                            reader.GetString(1), 
                                             reader.GetString(2), 
                                             reader.GetString(3),
                                             reader.GetDateTime(4),
@@ -133,9 +134,10 @@ namespace U1_Tarea_1___AochengYe.dao
 
             try
             {
-                string query = "UPDATE catalogo SET (titulo=@titulo, autor=@autor, editorial=@editorial, " +
+                string query = "UPDATE catalogo SET titulo=@titulo, autor=@autor, editorial=@editorial, " +
                     "fecha_publicacion=@fecha_publicacion, imagen=@imagen, descripcion=@descripcion," +
-                    " precio=@precio, unidades=@unidades, enventa@enventa) WHERE id = @id";
+                    " precio=@precio, unidades=@unidades, enventa=@enventa WHERE id = @id";
+
 
                 Conexion objetoConexion = new Conexion();
 

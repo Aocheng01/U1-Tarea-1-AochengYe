@@ -34,21 +34,14 @@ namespace U1_Tarea_1___AochengYe
                 txtBoxAutor.BackColor = Color.Red;
                 datosValidos = false;
             }
-            DateTime fechaPublicacion;
-            bool fechaValida = DateTime.TryParse(txtBoxFchaPublicacion.Text, out fechaPublicacion);
-            if (!fechaValida)
-            {
-                MessageBox.Show("Formato de fecha incorrecto. Por favor, ingrese una fecha válida.");
-                txtBoxFchaPublicacion.BackColor = Color.Red;
-                datosValidos = false;
-            }
+     
             if (datosValidos)
             {
                 Libro nuevoLibro = new Libro(
                     txtBoxTitulo.Text,
                     txtBoxAutor.Text,
                     txtBoxEditorial.Text,
-                    fechaPublicacion,
+                    fechaPublicacionPicker.Value,
                     txtBoxImagen.Text,
                     txtBoxDescripcion.Text,
                     float.Parse(txtBoxPrecio.Text),
@@ -70,11 +63,6 @@ namespace U1_Tarea_1___AochengYe
         private void txtBoxTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             txtBoxTitulo.BackColor = Color.White;
-        }
-
-        private void txtBoxFchaPublicacion_MouseDown(object sender, MouseEventArgs e)
-        {
-            txtBoxFchaPublicacion.BackColor = Color.White;
         }
 
         private void FrmAnnadir_Load(object sender, EventArgs e)

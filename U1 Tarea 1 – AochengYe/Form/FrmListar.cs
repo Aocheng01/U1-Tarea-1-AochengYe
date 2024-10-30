@@ -50,16 +50,17 @@ namespace U1_Tarea_1___AochengYe
             if (e.RowIndex >= 0) // Asegúrate de que el clic se hace en una fila válida
             {
                 DataGridViewRow filaSeleccionada = dataGridView1.Rows[e.RowIndex];
-
-                txtBoxTitulo.Text = filaSeleccionada.Cells[0].Value?.ToString() ?? string.Empty;
-                txtBoxAutor.Text = filaSeleccionada.Cells[1].Value?.ToString() ?? string.Empty;
-                txtBoxEditorial.Text = filaSeleccionada.Cells[2].Value?.ToString() ?? string.Empty;
-                txtBoxFchaPublicacion.Text = filaSeleccionada.Cells[3].Value?.ToString() ?? string.Empty;
-                txtBoxImagen.Text = filaSeleccionada.Cells[4].Value?.ToString() ?? string.Empty;
-                txtBoxDescripcion.Text = filaSeleccionada.Cells[5].Value?.ToString() ?? string.Empty;
-                txtBoxPrecio.Text = filaSeleccionada.Cells[6].Value?.ToString() ?? string.Empty;
-                txtBoxUnidades.Text = filaSeleccionada.Cells[7].Value?.ToString() ?? string.Empty;
-                if (filaSeleccionada.Cells[8].Value.ToString().Equals("True"))
+                
+                txtBoxID.Text = filaSeleccionada.Cells[0].Value?.ToString() ?? string.Empty;
+                txtBoxTitulo.Text = filaSeleccionada.Cells[1].Value?.ToString() ?? string.Empty;
+                txtBoxAutor.Text = filaSeleccionada.Cells[2].Value?.ToString() ?? string.Empty;
+                txtBoxEditorial.Text = filaSeleccionada.Cells[3].Value?.ToString() ?? string.Empty;
+                fechaPublicacionPicker.Value = DateTime.Parse(filaSeleccionada.Cells[4].Value?.ToString() ?? string.Empty);
+                txtBoxImagen.Text = filaSeleccionada.Cells[5].Value?.ToString() ?? string.Empty;
+                txtBoxDescripcion.Text = filaSeleccionada.Cells[6].Value?.ToString() ?? string.Empty;
+                txtBoxPrecio.Text = filaSeleccionada.Cells[7].Value?.ToString() ?? string.Empty;
+                txtBoxUnidades.Text = filaSeleccionada.Cells[8].Value?.ToString() ?? string.Empty;
+                if (filaSeleccionada.Cells[9].Value.ToString().Equals("True"))
                 {
                     checkBoxEnVenta.Checked = true;
                 }

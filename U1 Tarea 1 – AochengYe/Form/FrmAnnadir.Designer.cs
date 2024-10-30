@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fechaPublicacionPicker = new System.Windows.Forms.DateTimePicker();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtBoxUnidades = new System.Windows.Forms.TextBox();
             this.txtBoxPrecio = new System.Windows.Forms.TextBox();
@@ -47,14 +48,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.fechaPublicacionPicker);
             this.panel1.Controls.Add(this.btnEnviar);
             this.panel1.Controls.Add(this.txtBoxUnidades);
             this.panel1.Controls.Add(this.txtBoxPrecio);
@@ -74,17 +74,27 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 310);
+            this.panel1.Location = new System.Drawing.Point(0, 201);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1992, 798);
+            this.panel1.Size = new System.Drawing.Size(1328, 519);
             this.panel1.TabIndex = 0;
+            // 
+            // fechaPublicacionPicker
+            // 
+            this.fechaPublicacionPicker.Location = new System.Drawing.Point(545, 184);
+            this.fechaPublicacionPicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaPublicacionPicker.Name = "fechaPublicacionPicker";
+            this.fechaPublicacionPicker.Size = new System.Drawing.Size(201, 20);
+            this.fechaPublicacionPicker.TabIndex = 21;
             // 
             // btnEnviar
             // 
             this.btnEnviar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(1546, 109);
+            this.btnEnviar.Location = new System.Drawing.Point(1031, 71);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(363, 672);
+            this.btnEnviar.Size = new System.Drawing.Size(242, 437);
             this.btnEnviar.TabIndex = 1;
             this.btnEnviar.Text = "Añadir Libro";
             this.btnEnviar.UseVisualStyleBackColor = true;
@@ -92,53 +102,60 @@
             // 
             // txtBoxUnidades
             // 
-            this.txtBoxUnidades.Location = new System.Drawing.Point(548, 549);
+            this.txtBoxUnidades.Location = new System.Drawing.Point(365, 357);
+            this.txtBoxUnidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxUnidades.Name = "txtBoxUnidades";
-            this.txtBoxUnidades.Size = new System.Drawing.Size(174, 26);
+            this.txtBoxUnidades.Size = new System.Drawing.Size(117, 20);
             this.txtBoxUnidades.TabIndex = 18;
             // 
             // txtBoxPrecio
             // 
-            this.txtBoxPrecio.Location = new System.Drawing.Point(134, 545);
+            this.txtBoxPrecio.Location = new System.Drawing.Point(89, 354);
+            this.txtBoxPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxPrecio.Name = "txtBoxPrecio";
-            this.txtBoxPrecio.Size = new System.Drawing.Size(127, 26);
+            this.txtBoxPrecio.Size = new System.Drawing.Size(86, 20);
             this.txtBoxPrecio.TabIndex = 17;
             // 
             // txtBoxDescripcion
             // 
-            this.txtBoxDescripcion.Location = new System.Drawing.Point(206, 362);
+            this.txtBoxDescripcion.Location = new System.Drawing.Point(137, 235);
+            this.txtBoxDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxDescripcion.Multiline = true;
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
-            this.txtBoxDescripcion.Size = new System.Drawing.Size(1248, 121);
+            this.txtBoxDescripcion.Size = new System.Drawing.Size(833, 80);
             this.txtBoxDescripcion.TabIndex = 16;
             // 
             // txtBoxImagen
             // 
-            this.txtBoxImagen.Location = new System.Drawing.Point(1228, 285);
+            this.txtBoxImagen.Location = new System.Drawing.Point(819, 185);
+            this.txtBoxImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxImagen.Name = "txtBoxImagen";
-            this.txtBoxImagen.Size = new System.Drawing.Size(223, 26);
+            this.txtBoxImagen.Size = new System.Drawing.Size(150, 20);
             this.txtBoxImagen.TabIndex = 15;
             // 
             // txtBoxEditorial
             // 
-            this.txtBoxEditorial.Location = new System.Drawing.Point(160, 285);
+            this.txtBoxEditorial.Location = new System.Drawing.Point(107, 185);
+            this.txtBoxEditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxEditorial.Name = "txtBoxEditorial";
-            this.txtBoxEditorial.Size = new System.Drawing.Size(403, 26);
+            this.txtBoxEditorial.Size = new System.Drawing.Size(270, 20);
             this.txtBoxEditorial.TabIndex = 13;
             // 
             // txtBoxAutor
             // 
-            this.txtBoxAutor.Location = new System.Drawing.Point(741, 212);
+            this.txtBoxAutor.Location = new System.Drawing.Point(494, 138);
+            this.txtBoxAutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxAutor.Name = "txtBoxAutor";
-            this.txtBoxAutor.Size = new System.Drawing.Size(710, 26);
+            this.txtBoxAutor.Size = new System.Drawing.Size(475, 20);
             this.txtBoxAutor.TabIndex = 12;
             this.txtBoxAutor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxAutor_MouseDown);
             // 
             // txtBoxTitulo
             // 
-            this.txtBoxTitulo.Location = new System.Drawing.Point(156, 215);
+            this.txtBoxTitulo.Location = new System.Drawing.Point(104, 140);
+            this.txtBoxTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxTitulo.Name = "txtBoxTitulo";
-            this.txtBoxTitulo.Size = new System.Drawing.Size(444, 26);
+            this.txtBoxTitulo.Size = new System.Drawing.Size(297, 20);
             this.txtBoxTitulo.TabIndex = 11;
             this.txtBoxTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxTitulo_MouseDown);
             // 
@@ -146,9 +163,10 @@
             // 
             this.checkBoxEnVenta.AutoSize = true;
             this.checkBoxEnVenta.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxEnVenta.Location = new System.Drawing.Point(836, 542);
+            this.checkBoxEnVenta.Location = new System.Drawing.Point(557, 352);
+            this.checkBoxEnVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxEnVenta.Name = "checkBoxEnVenta";
-            this.checkBoxEnVenta.Size = new System.Drawing.Size(162, 37);
+            this.checkBoxEnVenta.Size = new System.Drawing.Size(109, 27);
             this.checkBoxEnVenta.TabIndex = 10;
             this.checkBoxEnVenta.Text = "¿En venta?";
             this.checkBoxEnVenta.UseVisualStyleBackColor = true;
@@ -157,9 +175,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(291, 542);
+            this.label9.Location = new System.Drawing.Point(194, 352);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(259, 33);
+            this.label9.Size = new System.Drawing.Size(168, 23);
             this.label9.TabIndex = 8;
             this.label9.Text = "Unidades en almacén: ";
             // 
@@ -167,9 +186,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1122, 278);
+            this.label8.Location = new System.Drawing.Point(748, 181);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 33);
+            this.label8.Size = new System.Drawing.Size(67, 23);
             this.label8.TabIndex = 7;
             this.label8.Text = "Imagen:";
             // 
@@ -177,9 +197,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(594, 278);
+            this.label7.Location = new System.Drawing.Point(396, 181);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(217, 33);
+            this.label7.Size = new System.Drawing.Size(143, 23);
             this.label7.TabIndex = 6;
             this.label7.Text = "Fecha Publicación:";
             // 
@@ -187,9 +208,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(634, 208);
+            this.label6.Location = new System.Drawing.Point(423, 135);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 33);
+            this.label6.Size = new System.Drawing.Size(67, 23);
             this.label6.TabIndex = 5;
             this.label6.Text = "Autor:*";
             // 
@@ -197,9 +219,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 538);
+            this.label5.Location = new System.Drawing.Point(24, 350);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 33);
+            this.label5.Size = new System.Drawing.Size(60, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Precio:";
             // 
@@ -207,9 +230,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 355);
+            this.label4.Location = new System.Drawing.Point(24, 231);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 33);
+            this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Descripción:";
             // 
@@ -217,9 +241,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 278);
+            this.label3.Location = new System.Drawing.Point(24, 181);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 33);
+            this.label3.Size = new System.Drawing.Size(80, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Editorial:";
             // 
@@ -227,9 +252,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 208);
+            this.label2.Location = new System.Drawing.Point(24, 135);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 33);
+            this.label2.Size = new System.Drawing.Size(68, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Título:*";
             // 
@@ -237,27 +263,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 132);
+            this.label1.Location = new System.Drawing.Point(24, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 33);
+            this.label1.Size = new System.Drawing.Size(97, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos Libro";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(817, 283);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
-            this.dateTimePicker1.TabIndex = 21;
-            // 
             // FrmAnnadir
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1992, 1108);
+            this.ClientSize = new System.Drawing.Size(1328, 720);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmAnnadir";
             this.Text = "frmAnnadir";
             this.Load += new System.EventHandler(this.FrmAnnadir_Load);
@@ -288,6 +309,6 @@
         private System.Windows.Forms.TextBox txtBoxAutor;
         private System.Windows.Forms.TextBox txtBoxTitulo;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechaPublicacionPicker;
     }
 }

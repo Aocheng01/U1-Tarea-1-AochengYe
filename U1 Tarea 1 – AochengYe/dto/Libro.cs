@@ -8,6 +8,7 @@ namespace U1_Tarea_1___AochengYe.dto
 {
     internal class Libro
     {
+        public int id { get; set; }
         public string titulo { get; set; }
         public string autor { get; set; }
         public string editorial { get; set; }
@@ -40,6 +41,21 @@ namespace U1_Tarea_1___AochengYe.dto
         }
 
         public Libro() { }
+
+        public Libro(int id, string titulo, string autor, string editorial, DateTime fecha_publicacion, string imagen, string descripcion, float precio, int unidades, bool enventa)
+        {
+            this.id = id;
+            this.titulo = titulo;
+            this.autor = autor;
+            this.editorial = editorial;
+            this.fecha_publicacion = fecha_publicacion;
+            this.imagen = imagen;
+            this.descripcion = descripcion;
+            this.precio = precio;
+            this.unidades = unidades;
+            this.enventa = enventa;
+        }
+
         public override string ToString()
         {
             return base.ToString();

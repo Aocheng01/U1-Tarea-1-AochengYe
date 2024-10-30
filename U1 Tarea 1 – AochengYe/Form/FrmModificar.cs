@@ -32,7 +32,7 @@ namespace U1_Tarea_1___AochengYe
             txtBoxPrecio.Text = libro.precio.ToString();
             txtBoxDescripcion.Text = libro.descripcion;
             txtBoxEditorial.Text = libro.editorial;
-            txtBoxFchaPublicacion.Text = libro.fecha_publicacion.ToString();
+            fechaPublicacionPicker.Value = libro.fecha_publicacion;
             txtBoxImagen.Text=libro.imagen;
             txtBoxUnidades.Text = libro.unidades.ToString();
             txtBoxAutor.Text = libro.autor;
@@ -51,7 +51,7 @@ namespace U1_Tarea_1___AochengYe
             if (checkBoxEnVenta.Checked) { 
                 enventaEstado = true;
             }
-            Libro libroNuevo = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text, DateTime.Parse(txtBoxFchaPublicacion.Text),txtBoxImagen.Text,txtBoxDescripcion.Text,float.Parse(txtBoxPrecio.Text),int.Parse(txtBoxUnidades.Text),enventaEstado);
+            Libro libroNuevo = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text, fechaPublicacionPicker.Value,txtBoxImagen.Text,txtBoxDescripcion.Text,float.Parse(txtBoxPrecio.Text),int.Parse(txtBoxUnidades.Text),enventaEstado);
 
             daoLibro.modificarLibro(int.Parse(txtBoxID.Text), libroNuevo);
 
