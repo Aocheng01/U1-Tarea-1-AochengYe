@@ -34,7 +34,6 @@
             this.txtBoxPrecio = new System.Windows.Forms.TextBox();
             this.txtBoxDescripcion = new System.Windows.Forms.TextBox();
             this.txtBoxImagen = new System.Windows.Forms.TextBox();
-            this.txtBoxFchaPublicacion = new System.Windows.Forms.TextBox();
             this.txtBoxEditorial = new System.Windows.Forms.TextBox();
             this.txtBoxAutor = new System.Windows.Forms.TextBox();
             this.txtBoxTitulo = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,12 +56,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.btnListar);
             this.panel1.Controls.Add(this.txtBoxUnidades);
             this.panel1.Controls.Add(this.txtBoxPrecio);
             this.panel1.Controls.Add(this.txtBoxDescripcion);
             this.panel1.Controls.Add(this.txtBoxImagen);
-            this.panel1.Controls.Add(this.txtBoxFchaPublicacion);
             this.panel1.Controls.Add(this.txtBoxEditorial);
             this.panel1.Controls.Add(this.txtBoxAutor);
             this.panel1.Controls.Add(this.txtBoxTitulo);
@@ -121,13 +121,6 @@
             this.txtBoxImagen.Name = "txtBoxImagen";
             this.txtBoxImagen.Size = new System.Drawing.Size(236, 26);
             this.txtBoxImagen.TabIndex = 15;
-            // 
-            // txtBoxFchaPublicacion
-            // 
-            this.txtBoxFchaPublicacion.Location = new System.Drawing.Point(802, 178);
-            this.txtBoxFchaPublicacion.Name = "txtBoxFchaPublicacion";
-            this.txtBoxFchaPublicacion.Size = new System.Drawing.Size(246, 26);
-            this.txtBoxFchaPublicacion.TabIndex = 14;
             // 
             // txtBoxEditorial
             // 
@@ -268,6 +261,13 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(802, 177);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
+            this.dateTimePicker1.TabIndex = 20;
+            // 
             // FrmListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -294,7 +294,6 @@
         private System.Windows.Forms.TextBox txtBoxPrecio;
         private System.Windows.Forms.TextBox txtBoxDescripcion;
         private System.Windows.Forms.TextBox txtBoxImagen;
-        private System.Windows.Forms.TextBox txtBoxFchaPublicacion;
         private System.Windows.Forms.TextBox txtBoxEditorial;
         private System.Windows.Forms.TextBox txtBoxAutor;
         private System.Windows.Forms.TextBox txtBoxTitulo;
@@ -310,5 +309,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

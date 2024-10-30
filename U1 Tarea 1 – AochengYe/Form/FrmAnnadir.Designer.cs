@@ -34,7 +34,6 @@
             this.txtBoxPrecio = new System.Windows.Forms.TextBox();
             this.txtBoxDescripcion = new System.Windows.Forms.TextBox();
             this.txtBoxImagen = new System.Windows.Forms.TextBox();
-            this.txtBoxFchaPublicacion = new System.Windows.Forms.TextBox();
             this.txtBoxEditorial = new System.Windows.Forms.TextBox();
             this.txtBoxAutor = new System.Windows.Forms.TextBox();
             this.txtBoxTitulo = new System.Windows.Forms.TextBox();
@@ -48,18 +47,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.btnEnviar);
             this.panel1.Controls.Add(this.txtBoxUnidades);
             this.panel1.Controls.Add(this.txtBoxPrecio);
             this.panel1.Controls.Add(this.txtBoxDescripcion);
             this.panel1.Controls.Add(this.txtBoxImagen);
-            this.panel1.Controls.Add(this.txtBoxFchaPublicacion);
             this.panel1.Controls.Add(this.txtBoxEditorial);
             this.panel1.Controls.Add(this.txtBoxAutor);
             this.panel1.Controls.Add(this.txtBoxTitulo);
@@ -118,14 +118,6 @@
             this.txtBoxImagen.Name = "txtBoxImagen";
             this.txtBoxImagen.Size = new System.Drawing.Size(223, 26);
             this.txtBoxImagen.TabIndex = 15;
-            // 
-            // txtBoxFchaPublicacion
-            // 
-            this.txtBoxFchaPublicacion.Location = new System.Drawing.Point(818, 285);
-            this.txtBoxFchaPublicacion.Name = "txtBoxFchaPublicacion";
-            this.txtBoxFchaPublicacion.Size = new System.Drawing.Size(234, 26);
-            this.txtBoxFchaPublicacion.TabIndex = 14;
-            this.txtBoxFchaPublicacion.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxFchaPublicacion_MouseDown);
             // 
             // txtBoxEditorial
             // 
@@ -251,6 +243,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos Libro";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(817, 283);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
+            this.dateTimePicker1.TabIndex = 21;
+            // 
             // FrmAnnadir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -285,10 +284,10 @@
         private System.Windows.Forms.TextBox txtBoxPrecio;
         private System.Windows.Forms.TextBox txtBoxDescripcion;
         private System.Windows.Forms.TextBox txtBoxImagen;
-        private System.Windows.Forms.TextBox txtBoxFchaPublicacion;
         private System.Windows.Forms.TextBox txtBoxEditorial;
         private System.Windows.Forms.TextBox txtBoxAutor;
         private System.Windows.Forms.TextBox txtBoxTitulo;
         private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

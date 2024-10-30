@@ -18,6 +18,7 @@ namespace U1_Tarea_1___AochengYe.dto
         public int unidades { get; set; }
         public Boolean enventa { get; set; }
 
+
         public Libro(string titulo, string autor, string editorial, DateTime fecha_publicacion, string imagen, string descripcion, float precio, int unidades, bool enventa)
         {
             this.titulo = titulo;
@@ -37,6 +38,8 @@ namespace U1_Tarea_1___AochengYe.dto
             this.autor = autor;
             this.editorial = editorial;
         }
+
+        public Libro() { }
         public override string ToString()
         {
             return base.ToString();

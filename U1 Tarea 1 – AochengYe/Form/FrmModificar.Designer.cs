@@ -33,7 +33,6 @@
             this.txtBoxPrecio = new System.Windows.Forms.TextBox();
             this.txtBoxDescripcion = new System.Windows.Forms.TextBox();
             this.txtBoxImagen = new System.Windows.Forms.TextBox();
-            this.txtBoxFchaPublicacion = new System.Windows.Forms.TextBox();
             this.txtBoxEditorial = new System.Windows.Forms.TextBox();
             this.txtBoxAutor = new System.Windows.Forms.TextBox();
             this.txtBoxTitulo = new System.Windows.Forms.TextBox();
@@ -51,7 +50,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxID = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,11 +59,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.txtBoxUnidades);
             this.panel1.Controls.Add(this.txtBoxPrecio);
             this.panel1.Controls.Add(this.txtBoxDescripcion);
             this.panel1.Controls.Add(this.txtBoxImagen);
-            this.panel1.Controls.Add(this.txtBoxFchaPublicacion);
             this.panel1.Controls.Add(this.txtBoxEditorial);
             this.panel1.Controls.Add(this.txtBoxAutor);
             this.panel1.Controls.Add(this.txtBoxTitulo);
@@ -111,13 +111,6 @@
             this.txtBoxImagen.Name = "txtBoxImagen";
             this.txtBoxImagen.Size = new System.Drawing.Size(223, 26);
             this.txtBoxImagen.TabIndex = 15;
-            // 
-            // txtBoxFchaPublicacion
-            // 
-            this.txtBoxFchaPublicacion.Location = new System.Drawing.Point(818, 285);
-            this.txtBoxFchaPublicacion.Name = "txtBoxFchaPublicacion";
-            this.txtBoxFchaPublicacion.Size = new System.Drawing.Size(234, 26);
-            this.txtBoxFchaPublicacion.TabIndex = 14;
             // 
             // txtBoxEditorial
             // 
@@ -250,6 +243,7 @@
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar libro";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label10
             // 
@@ -265,7 +259,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtBoxID);
             this.panel2.Controls.Add(this.btnModificar);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Location = new System.Drawing.Point(0, 248);
@@ -284,12 +278,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtBoxID
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 26);
-            this.textBox1.TabIndex = 19;
+            this.txtBoxID.Location = new System.Drawing.Point(91, 26);
+            this.txtBoxID.Name = "txtBoxID";
+            this.txtBoxID.Size = new System.Drawing.Size(155, 26);
+            this.txtBoxID.TabIndex = 19;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(817, 285);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
+            this.dateTimePicker1.TabIndex = 21;
             // 
             // FrmModificar
             // 
@@ -317,7 +318,6 @@
         private System.Windows.Forms.TextBox txtBoxPrecio;
         private System.Windows.Forms.TextBox txtBoxDescripcion;
         private System.Windows.Forms.TextBox txtBoxImagen;
-        private System.Windows.Forms.TextBox txtBoxFchaPublicacion;
         private System.Windows.Forms.TextBox txtBoxEditorial;
         private System.Windows.Forms.TextBox txtBoxAutor;
         private System.Windows.Forms.TextBox txtBoxTitulo;
@@ -335,6 +335,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxID;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

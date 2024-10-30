@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using U1_Tarea_1___AochengYe.dao;
+using U1_Tarea_1___AochengYe.dto;
 
 namespace U1_Tarea_1___AochengYe
 {
@@ -19,6 +21,41 @@ namespace U1_Tarea_1___AochengYe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            DaoLibro daoLibro = new DaoLibro();
+            
+
+            Libro libro = daoLibro.buscarLibro(int.Parse(txtBoxID.Text));
+
+         
+            txtBoxTitulo.Text=libro.titulo;
+            txtBoxPrecio.Text = libro.precio.ToString();
+            txtBoxDescripcion.Text = libro.descripcion;
+            txtBoxEditorial.Text = libro.editorial;
+            txtBoxFchaPublicacion.Text = libro.fecha_publicacion.ToString();
+            txtBoxImagen.Text=libro.imagen;
+            txtBoxUnidades.Text = libro.unidades.ToString();
+            txtBoxAutor.Text = libro.autor;
+            if (libro.enventa == true) { 
+            checkBoxEnVenta.Checked = true;
+            }
+
+
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            DaoLibro daoLibro = new DaoLibro();
+            bool enventaEstado=false;
+            if (checkBoxEnVenta.Checked) { 
+                enventaEstado = true;
+            }
+            Libro libroNuevo = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text, DateTime.Parse(txtBoxFchaPublicacion.Text),txtBoxImagen.Text,txtBoxDescripcion.Text,float.Parse(txtBoxPrecio.Text),int.Parse(txtBoxUnidades.Text),enventaEstado);
+
+            daoLibro.modificarLibro(int.Parse(txtBoxID.Text), libroNuevo);
+
+            
 
         }
     }
