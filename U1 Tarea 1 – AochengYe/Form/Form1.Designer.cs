@@ -40,6 +40,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaxi)).BeginInit();
@@ -60,7 +62,7 @@
             this.panelBarraTitulo.Controls.Add(this.btnMin);
             this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelBarraTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelBarraTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
             this.panelBarraTitulo.Size = new System.Drawing.Size(1499, 34);
             this.panelBarraTitulo.TabIndex = 0;
@@ -72,7 +74,7 @@
             this.btnRes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRes.Image = global::U1_Tarea_1___AochengYe.Properties.Resources.res;
             this.btnRes.Location = new System.Drawing.Point(1454, 8);
-            this.btnRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRes.Margin = new System.Windows.Forms.Padding(2);
             this.btnRes.Name = "btnRes";
             this.btnRes.Size = new System.Drawing.Size(17, 16);
             this.btnRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -87,7 +89,7 @@
             this.btnMaxi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaxi.Image = global::U1_Tarea_1___AochengYe.Properties.Resources.maxi;
             this.btnMaxi.Location = new System.Drawing.Point(1454, 8);
-            this.btnMaxi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMaxi.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaxi.Name = "btnMaxi";
             this.btnMaxi.Size = new System.Drawing.Size(17, 16);
             this.btnMaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +103,7 @@
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::U1_Tarea_1___AochengYe.Properties.Resources.cerrar;
             this.btnCerrar.Location = new System.Drawing.Point(1474, 8);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(17, 16);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -115,7 +117,7 @@
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Image = global::U1_Tarea_1___AochengYe.Properties.Resources.minimazar;
             this.btnMin.Location = new System.Drawing.Point(1433, 8);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(2);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(17, 16);
             this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +132,7 @@
             this.panel2.Controls.Add(this.pctBoxDavinci);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 34);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(171, 871);
             this.panel2.TabIndex = 1;
@@ -149,7 +151,7 @@
             this.tblLayoutMenu.Controls.Add(this.btnPrincipal, 0, 0);
             this.tblLayoutMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblLayoutMenu.Location = new System.Drawing.Point(0, 151);
-            this.tblLayoutMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblLayoutMenu.Margin = new System.Windows.Forms.Padding(2);
             this.tblLayoutMenu.Name = "tblLayoutMenu";
             this.tblLayoutMenu.RowCount = 7;
             this.tblLayoutMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -172,7 +174,7 @@
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(2, 614);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(167, 104);
             this.btnSalir.TabIndex = 6;
@@ -190,7 +192,7 @@
             this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
             this.btnListar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListar.Location = new System.Drawing.Point(2, 512);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(167, 98);
             this.btnListar.TabIndex = 5;
@@ -208,7 +210,7 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(2, 410);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(167, 98);
             this.btnEliminar.TabIndex = 4;
@@ -226,7 +228,7 @@
             this.btnConsultar.Image = global::U1_Tarea_1___AochengYe.Properties.Resources.book_and_pencil_32px;
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultar.Location = new System.Drawing.Point(2, 308);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(167, 98);
             this.btnConsultar.TabIndex = 3;
@@ -244,7 +246,7 @@
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.Location = new System.Drawing.Point(2, 206);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(167, 98);
             this.btnModificar.TabIndex = 2;
@@ -262,7 +264,7 @@
             this.btnAnnadir.Image = ((System.Drawing.Image)(resources.GetObject("btnAnnadir.Image")));
             this.btnAnnadir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnnadir.Location = new System.Drawing.Point(2, 104);
-            this.btnAnnadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnnadir.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnadir.Name = "btnAnnadir";
             this.btnAnnadir.Size = new System.Drawing.Size(167, 98);
             this.btnAnnadir.TabIndex = 1;
@@ -280,7 +282,7 @@
             this.btnPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrincipal.Image")));
             this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrincipal.Location = new System.Drawing.Point(2, 2);
-            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(167, 98);
             this.btnPrincipal.TabIndex = 0;
@@ -293,7 +295,7 @@
             this.pctBoxDavinci.Dock = System.Windows.Forms.DockStyle.Top;
             this.pctBoxDavinci.Image = global::U1_Tarea_1___AochengYe.Properties.Resources.Screenshot_2024_10_16_162830;
             this.pctBoxDavinci.Location = new System.Drawing.Point(0, 0);
-            this.pctBoxDavinci.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pctBoxDavinci.Margin = new System.Windows.Forms.Padding(2);
             this.pctBoxDavinci.Name = "pctBoxDavinci";
             this.pctBoxDavinci.Size = new System.Drawing.Size(171, 151);
             this.pctBoxDavinci.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -305,7 +307,7 @@
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(171, 185);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1328, 720);
             this.panelContenedor.TabIndex = 2;
@@ -326,13 +328,38 @@
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.panelTitulo.Controls.Add(this.label1);
+            this.panelTitulo.Controls.Add(this.lblFecha);
             this.panelTitulo.Controls.Add(this.lblTitulo);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(171, 34);
-            this.panelTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1328, 151);
             this.panelTitulo.TabIndex = 3;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
+            this.lblFecha.Location = new System.Drawing.Point(144, 69);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(0, 38);
+            this.lblFecha.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 38);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Hoy es: ";
             // 
             // FormularioPrincipal
             // 
@@ -344,7 +371,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -383,6 +410,8 @@
         private System.Windows.Forms.Button btnAnnadir;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.PictureBox pctBoxDavinci;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label label1;
     }
 }
 

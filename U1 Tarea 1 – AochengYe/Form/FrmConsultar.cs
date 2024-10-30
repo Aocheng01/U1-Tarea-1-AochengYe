@@ -22,13 +22,38 @@ namespace U1_Tarea_1___AochengYe
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             DaoLibro daoLibro = new DaoLibro();
+            Libro libro = null;
+            
+            //Con operador ternario 
+            int? id = string.IsNullOrEmpty(txtBoxID.Text) ? (int?)null : int.Parse(txtBoxID.Text);
+            
+            string titulo = string.IsNullOrEmpty(txtBoxTituloBuscar.Text) ? null : txtBoxTituloBuscar.Text;
+
+            //con if else, es más largo y tedioso, mejor con op ternario.
+            //int? id;
+            //if (string.IsNullOrEmpty(txtBoxID.Text))
+            //{
+            //    id = null;
+            //}
+            //else
+            //{
+            //    id = int.Parse(txtBoxID.Text);
+            //}
+            //string titulo;
+            //if (string.IsNullOrEmpty(txtBoxTituloBuscar.Text))
+            //{
+            //    titulo = null;
+            //}
+            //else
+            //{
+            //    titulo = txtBoxTituloBuscar.Text;
+            //}
 
 
-            Libro libro = daoLibro.buscarLibro(int.Parse(txtBoxID.Text));
-
+            libro = daoLibro.buscarLibro(id, titulo);
             if (libro == null)
             {
-                MessageBox.Show("No se encontró el libro con el id:" + txtBoxID + " o con título: " + txtBoxTituloBuscar);
+                MessageBox.Show("No se encontró el libro con el id: " + txtBoxID.Text + " o con título: " + txtBoxTituloBuscar.Text);
             }
             else
             {
@@ -40,10 +65,7 @@ namespace U1_Tarea_1___AochengYe
                 txtBoxImagen.Text = libro.imagen;
                 txtBoxUnidades.Text = libro.unidades.ToString();
                 txtBoxAutor.Text = libro.autor;
-                if (libro.enventa == true)
-                {
-                    checkBoxEnVenta.Checked = true;
-                }
+                checkBoxEnVenta.Checked = libro.enventa;
             }
         }
     }

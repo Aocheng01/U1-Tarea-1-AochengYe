@@ -96,36 +96,49 @@ namespace U1_Tarea_1___AochengYe.dao
         }
 
 
-        public Libro buscarLibro(int id)
+        public Libro buscarLibro(int? id = null, string titulo = null)
         {
             Libro libro = null;
-          
-            
-            try { 
-                
-                string query = "SELECT * FROM catalogo WHERE id = @id";
-
-                
+            try
+            {
+                string query = "SELECT * FROM catalogo WHERE ";
+                if (id.HasValue)
+                {   
+                    query += "id = @id";
+                }
+                else if (!string.IsNullOrEmpty(titulo))
+                {
+                    query += "titulo = @titulo";
+                }
+                else
+                {
+                    throw new ArgumentException("Debe proporcionar un id o un título para buscar un libro.");
+                }
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                myCommand.Parameters.AddWithValue("@id", id);
-                
+                if (id.HasValue)
+                {
+                    myCommand.Parameters.AddWithValue("@id", id.Value);
+                }
+                else
+                {
+                    myCommand.Parameters.AddWithValue("@titulo", titulo);
+                }
                 MySqlDataReader reader = myCommand.ExecuteReader();
-                while (reader.Read()) {
+                while (reader.Read())
+                {
                     libro = new Libro(reader.GetString(1),
-                                      reader.GetString(2),
-                                      reader.GetString(3),
-                                      reader.GetDateTime(4),
-                                      reader.GetString(5),
-                                      reader.GetString(6),
-                                      reader.GetFloat(7),
-                                      reader.GetInt16(8),
-                                      reader.GetBoolean(9)
-                                                            );
-                };
+                        reader.GetString(2),
+                        reader.GetString(3),
+                        reader.GetDateTime(4),
+                        reader.GetString(5),
+                        reader.GetString(6),
+                        reader.GetFloat(7),
+                        reader.GetInt16(8),
+                        reader.GetBoolean(9));
+                }
                 reader.Close();
                 objetoConexion.cerrarConexion();
-
             }
             catch (Exception ex)
             {

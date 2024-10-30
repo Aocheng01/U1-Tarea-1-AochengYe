@@ -117,4 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Permite modificar los datos de un libro a partir de su ID. Si desconoce el ID la sección "Consultar" 
+permite buscar por título. Cuando haya terminado de modificar los datos deseados, presione "
+Modificar Libro" para actualizar la base de datos.</value>
+  </data>
 </root>

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtBoxID = new System.Windows.Forms.TextBox();
             this.fechaPublicacionPicker = new System.Windows.Forms.DateTimePicker();
             this.btnListar = new System.Windows.Forms.Button();
             this.txtBoxUnidades = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtBoxID = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,15 +81,34 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 348);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1312, 333);
             this.panel1.TabIndex = 1;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(138, 14);
+            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(36, 23);
+            this.lblId.TabIndex = 22;
+            this.lblId.Text = "ID:";
+            // 
+            // txtBoxID
+            // 
+            this.txtBoxID.Location = new System.Drawing.Point(178, 17);
+            this.txtBoxID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBoxID.Name = "txtBoxID";
+            this.txtBoxID.Size = new System.Drawing.Size(68, 20);
+            this.txtBoxID.TabIndex = 21;
+            // 
             // fechaPublicacionPicker
             // 
             this.fechaPublicacionPicker.Location = new System.Drawing.Point(535, 115);
-            this.fechaPublicacionPicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaPublicacionPicker.Margin = new System.Windows.Forms.Padding(2);
             this.fechaPublicacionPicker.Name = "fechaPublicacionPicker";
             this.fechaPublicacionPicker.Size = new System.Drawing.Size(201, 20);
             this.fechaPublicacionPicker.TabIndex = 20;
@@ -97,9 +116,9 @@
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(1006, 77);
+            this.btnListar.Location = new System.Drawing.Point(1017, 70);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(263, 202);
+            this.btnListar.Size = new System.Drawing.Size(252, 209);
             this.btnListar.TabIndex = 19;
             this.btnListar.Text = "Mostrar \r\nLibros";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -108,7 +127,7 @@
             // txtBoxUnidades
             // 
             this.txtBoxUnidades.Location = new System.Drawing.Point(355, 287);
-            this.txtBoxUnidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxUnidades.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxUnidades.Name = "txtBoxUnidades";
             this.txtBoxUnidades.Size = new System.Drawing.Size(125, 20);
             this.txtBoxUnidades.TabIndex = 18;
@@ -116,7 +135,7 @@
             // txtBoxPrecio
             // 
             this.txtBoxPrecio.Location = new System.Drawing.Point(79, 285);
-            this.txtBoxPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxPrecio.Name = "txtBoxPrecio";
             this.txtBoxPrecio.Size = new System.Drawing.Size(95, 20);
             this.txtBoxPrecio.TabIndex = 17;
@@ -124,7 +143,7 @@
             // txtBoxDescripcion
             // 
             this.txtBoxDescripcion.Location = new System.Drawing.Point(127, 165);
-            this.txtBoxDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDescripcion.Multiline = true;
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
             this.txtBoxDescripcion.Size = new System.Drawing.Size(803, 93);
@@ -133,7 +152,7 @@
             // txtBoxImagen
             // 
             this.txtBoxImagen.Location = new System.Drawing.Point(809, 116);
-            this.txtBoxImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxImagen.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxImagen.Name = "txtBoxImagen";
             this.txtBoxImagen.Size = new System.Drawing.Size(159, 20);
             this.txtBoxImagen.TabIndex = 15;
@@ -141,7 +160,7 @@
             // txtBoxEditorial
             // 
             this.txtBoxEditorial.Location = new System.Drawing.Point(97, 116);
-            this.txtBoxEditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxEditorial.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxEditorial.Name = "txtBoxEditorial";
             this.txtBoxEditorial.Size = new System.Drawing.Size(279, 20);
             this.txtBoxEditorial.TabIndex = 13;
@@ -149,7 +168,7 @@
             // txtBoxAutor
             // 
             this.txtBoxAutor.Location = new System.Drawing.Point(484, 68);
-            this.txtBoxAutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxAutor.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxAutor.Name = "txtBoxAutor";
             this.txtBoxAutor.Size = new System.Drawing.Size(447, 20);
             this.txtBoxAutor.TabIndex = 12;
@@ -157,7 +176,7 @@
             // txtBoxTitulo
             // 
             this.txtBoxTitulo.Location = new System.Drawing.Point(94, 70);
-            this.txtBoxTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxTitulo.Name = "txtBoxTitulo";
             this.txtBoxTitulo.Size = new System.Drawing.Size(305, 20);
             this.txtBoxTitulo.TabIndex = 11;
@@ -167,7 +186,7 @@
             this.checkBoxEnVenta.AutoSize = true;
             this.checkBoxEnVenta.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxEnVenta.Location = new System.Drawing.Point(547, 282);
-            this.checkBoxEnVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxEnVenta.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxEnVenta.Name = "checkBoxEnVenta";
             this.checkBoxEnVenta.Size = new System.Drawing.Size(109, 27);
             this.checkBoxEnVenta.TabIndex = 10;
@@ -288,25 +307,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1312, 348);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // txtBoxID
-            // 
-            this.txtBoxID.Location = new System.Drawing.Point(178, 17);
-            this.txtBoxID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBoxID.Name = "txtBoxID";
-            this.txtBoxID.Size = new System.Drawing.Size(68, 20);
-            this.txtBoxID.TabIndex = 21;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(138, 14);
-            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(36, 23);
-            this.lblId.TabIndex = 22;
-            this.lblId.Text = "ID:";
             // 
             // FrmListar
             // 

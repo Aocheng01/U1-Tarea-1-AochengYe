@@ -27,6 +27,7 @@
         {
             InitializeComponent();
             this.ClientSize = new System.Drawing.Size(1499, 905);
+            lblFecha.Text = DateTime.Now.ToString("dddd dd 'de' MMMM 'de' yyyy");
         }
 
         private void Form1_Load(object sender, EventArgs e)

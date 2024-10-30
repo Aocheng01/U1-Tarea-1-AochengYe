@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.fechaPublicacionPicker = new System.Windows.Forms.DateTimePicker();
             this.txtBoxUnidades = new System.Windows.Forms.TextBox();
@@ -54,6 +55,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBoxID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -339,12 +341,25 @@
             this.txtBoxID.Size = new System.Drawing.Size(105, 20);
             this.txtBoxID.TabIndex = 19;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(21, 27);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(1257, 114);
+            this.label11.TabIndex = 24;
+            this.label11.Text = resources.GetString("label11.Text");
+            // 
             // FrmModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1313, 684);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -356,6 +371,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -387,5 +403,6 @@
         private System.Windows.Forms.DateTimePicker fechaPublicacionPicker;
         private System.Windows.Forms.TextBox txtBoxTituloBuscar;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label label11;
     }
 }

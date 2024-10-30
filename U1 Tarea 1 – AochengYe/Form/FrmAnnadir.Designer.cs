@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnnadir));
             this.panel1 = new System.Windows.Forms.Panel();
             this.fechaPublicacionPicker = new System.Windows.Forms.DateTimePicker();
             this.btnEnviar = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +77,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 201);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1328, 519);
             this.panel1.TabIndex = 0;
@@ -83,7 +85,7 @@
             // fechaPublicacionPicker
             // 
             this.fechaPublicacionPicker.Location = new System.Drawing.Point(545, 184);
-            this.fechaPublicacionPicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaPublicacionPicker.Margin = new System.Windows.Forms.Padding(2);
             this.fechaPublicacionPicker.Name = "fechaPublicacionPicker";
             this.fechaPublicacionPicker.Size = new System.Drawing.Size(201, 20);
             this.fechaPublicacionPicker.TabIndex = 21;
@@ -92,7 +94,7 @@
             // 
             this.btnEnviar.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.Location = new System.Drawing.Point(1031, 71);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(242, 437);
             this.btnEnviar.TabIndex = 1;
@@ -103,7 +105,7 @@
             // txtBoxUnidades
             // 
             this.txtBoxUnidades.Location = new System.Drawing.Point(365, 357);
-            this.txtBoxUnidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxUnidades.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxUnidades.Name = "txtBoxUnidades";
             this.txtBoxUnidades.Size = new System.Drawing.Size(117, 20);
             this.txtBoxUnidades.TabIndex = 18;
@@ -111,7 +113,7 @@
             // txtBoxPrecio
             // 
             this.txtBoxPrecio.Location = new System.Drawing.Point(89, 354);
-            this.txtBoxPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxPrecio.Name = "txtBoxPrecio";
             this.txtBoxPrecio.Size = new System.Drawing.Size(86, 20);
             this.txtBoxPrecio.TabIndex = 17;
@@ -119,7 +121,7 @@
             // txtBoxDescripcion
             // 
             this.txtBoxDescripcion.Location = new System.Drawing.Point(137, 235);
-            this.txtBoxDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDescripcion.Multiline = true;
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
             this.txtBoxDescripcion.Size = new System.Drawing.Size(833, 80);
@@ -128,7 +130,7 @@
             // txtBoxImagen
             // 
             this.txtBoxImagen.Location = new System.Drawing.Point(819, 185);
-            this.txtBoxImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxImagen.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxImagen.Name = "txtBoxImagen";
             this.txtBoxImagen.Size = new System.Drawing.Size(150, 20);
             this.txtBoxImagen.TabIndex = 15;
@@ -136,7 +138,7 @@
             // txtBoxEditorial
             // 
             this.txtBoxEditorial.Location = new System.Drawing.Point(107, 185);
-            this.txtBoxEditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxEditorial.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxEditorial.Name = "txtBoxEditorial";
             this.txtBoxEditorial.Size = new System.Drawing.Size(270, 20);
             this.txtBoxEditorial.TabIndex = 13;
@@ -144,7 +146,7 @@
             // txtBoxAutor
             // 
             this.txtBoxAutor.Location = new System.Drawing.Point(494, 138);
-            this.txtBoxAutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxAutor.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxAutor.Name = "txtBoxAutor";
             this.txtBoxAutor.Size = new System.Drawing.Size(475, 20);
             this.txtBoxAutor.TabIndex = 12;
@@ -153,7 +155,7 @@
             // txtBoxTitulo
             // 
             this.txtBoxTitulo.Location = new System.Drawing.Point(104, 140);
-            this.txtBoxTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxTitulo.Name = "txtBoxTitulo";
             this.txtBoxTitulo.Size = new System.Drawing.Size(297, 20);
             this.txtBoxTitulo.TabIndex = 11;
@@ -164,7 +166,7 @@
             this.checkBoxEnVenta.AutoSize = true;
             this.checkBoxEnVenta.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxEnVenta.Location = new System.Drawing.Point(557, 352);
-            this.checkBoxEnVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxEnVenta.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxEnVenta.Name = "checkBoxEnVenta";
             this.checkBoxEnVenta.Size = new System.Drawing.Size(109, 27);
             this.checkBoxEnVenta.TabIndex = 10;
@@ -270,21 +272,35 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos Libro";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(11, 44);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(1076, 114);
+            this.label10.TabIndex = 3;
+            this.label10.Text = resources.GetString("label10.Text");
+            // 
             // FrmAnnadir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1328, 720);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAnnadir";
             this.Text = "frmAnnadir";
             this.Load += new System.EventHandler(this.FrmAnnadir_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -310,5 +326,6 @@
         private System.Windows.Forms.TextBox txtBoxTitulo;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.DateTimePicker fechaPublicacionPicker;
+        private System.Windows.Forms.Label label10;
     }
 }

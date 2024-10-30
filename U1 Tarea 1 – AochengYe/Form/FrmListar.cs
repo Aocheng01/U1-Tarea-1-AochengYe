@@ -17,6 +17,7 @@ namespace U1_Tarea_1___AochengYe
         public FrmListar()
         {
             InitializeComponent();
+            btnListar_Click(this, EventArgs.Empty);
         }
 
         private void btnListar_Click(object sender, EventArgs e)
