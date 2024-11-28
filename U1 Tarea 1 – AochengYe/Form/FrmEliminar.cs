@@ -52,12 +52,18 @@ namespace U1_Tarea_1___AochengYe
         {
             DaoLibro daoLibro = new DaoLibro();
 
+            if (string.IsNullOrEmpty(txtBoxID.Text) && string.IsNullOrEmpty(txtBoxTitulo.Text))
+            {
+                MessageBox.Show("Por favor, introduzca un ID o título del libro");
+                return;
+            }
+
             bool enventaEstado = false;
             if (checkBoxEnVenta.Checked)
             {
                 enventaEstado = true;
             }
-            
+
             Libro libroAEliminar = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text,
                 fechaPublicacionPicker.Value, txtBoxImagen.Text, txtBoxDescripcion.Text, float.Parse(txtBoxPrecio.Text),
                 int.Parse(txtBoxUnidades.Text), enventaEstado);
@@ -73,8 +79,7 @@ namespace U1_Tarea_1___AochengYe
             txtBoxImagen.Clear();
             txtBoxUnidades.Clear();
             txtBoxAutor.Clear();
-            checkBoxEnVenta.CheckState=CheckState.Unchecked;
-
+            checkBoxEnVenta.CheckState = CheckState.Unchecked;
         }
     }
 }

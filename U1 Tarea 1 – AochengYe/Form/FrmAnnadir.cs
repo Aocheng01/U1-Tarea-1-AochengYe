@@ -22,19 +22,27 @@ namespace U1_Tarea_1___AochengYe
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             bool datosValidos = true;
-            if (string.IsNullOrEmpty(txtBoxTitulo.Text))
+            if (string.IsNullOrEmpty(txtBoxTitulo.Text) || string.IsNullOrEmpty(txtBoxAutor.Text) || string.IsNullOrEmpty(txtBoxPrecio.Text) || string.IsNullOrEmpty(txtBoxUnidades.Text))
             {
-                MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
+                MessageBox.Show("Se ha producido un error.\nLos campos título, autor, precio y unidades son obligatorios.");
                 txtBoxTitulo.BackColor = Color.Red;
                 datosValidos = false;
             }
             if (string.IsNullOrEmpty(txtBoxAutor.Text))
             {
-                MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
                 txtBoxAutor.BackColor = Color.Red;
-                datosValidos = false;
             }
-     
+            if (string.IsNullOrEmpty(txtBoxPrecio.Text))
+            {
+                txtBoxPrecio.BackColor = Color.Red;
+            }
+            if (string.IsNullOrEmpty(txtBoxUnidades.Text))
+            {
+                txtBoxUnidades.BackColor = Color.Red;
+            }
+
+
+
             if (datosValidos)
             {
                 Libro nuevoLibro = new Libro(
@@ -50,6 +58,20 @@ namespace U1_Tarea_1___AochengYe
                 );
                 DaoLibro daoLibro = new DaoLibro();
                 daoLibro.insertarLibro(nuevoLibro);
+
+                //despues de insertar libro, limpiar todos los textbox
+                txtBoxTitulo.Clear();
+                txtBoxAutor.Clear();
+                txtBoxPrecio.Clear();
+                txtBoxUnidades.Clear();
+                txtBoxImagen.Clear();
+                txtBoxDescripcion.Clear();
+                txtBoxEditorial.Clear();
+                checkBoxEnVenta.CheckState = CheckState.Unchecked;
+                fechaPublicacionPicker.Value = DateTime.Now;
+
+
+
             }
         }
 
@@ -66,7 +88,17 @@ namespace U1_Tarea_1___AochengYe
 
         private void FrmAnnadir_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void txtBoxPrecio_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtBoxPrecio.BackColor = Color.White;
+        }
+
+        private void txtBoxUnidades_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtBoxUnidades.BackColor = Color.White;
         }
     }
 }

@@ -46,7 +46,6 @@ namespace U1_Tarea_1___AochengYe.dao
 
                 MessageBox.Show("¡Libro registrado exitosamente!");
 
-                while (reader.Read()) { }
 
                 objetoConexion.cerrarConexion();
             }

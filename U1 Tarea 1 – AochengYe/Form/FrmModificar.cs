@@ -48,9 +48,15 @@ namespace U1_Tarea_1___AochengYe
                 checkBoxEnVenta.Checked = libro.enventa;
             }
         }
-        
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtBoxID.Text) || string.IsNullOrWhiteSpace(txtBoxTitulo.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un ID y título válidos.");
+                return;
+            }
+
             DaoLibro daoLibro = new DaoLibro();
             bool enventaEstado = false;
             if (checkBoxEnVenta.Checked)
@@ -60,9 +66,6 @@ namespace U1_Tarea_1___AochengYe
             Libro libroNuevo = new Libro(txtBoxTitulo.Text, txtBoxAutor.Text, txtBoxEditorial.Text, fechaPublicacionPicker.Value, txtBoxImagen.Text, txtBoxDescripcion.Text, float.Parse(txtBoxPrecio.Text), int.Parse(txtBoxUnidades.Text), enventaEstado);
 
             daoLibro.modificarLibro(int.Parse(txtBoxID.Text), libroNuevo);
-
-
-
         }
 
 

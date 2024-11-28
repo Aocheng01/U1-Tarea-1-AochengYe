@@ -109,6 +109,7 @@
             this.txtBoxUnidades.Name = "txtBoxUnidades";
             this.txtBoxUnidades.Size = new System.Drawing.Size(117, 20);
             this.txtBoxUnidades.TabIndex = 18;
+            this.txtBoxUnidades.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxUnidades_MouseDown);
             // 
             // txtBoxPrecio
             // 
@@ -117,6 +118,7 @@
             this.txtBoxPrecio.Name = "txtBoxPrecio";
             this.txtBoxPrecio.Size = new System.Drawing.Size(86, 20);
             this.txtBoxPrecio.TabIndex = 17;
+            this.txtBoxPrecio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBoxPrecio_MouseDown);
             // 
             // txtBoxDescripcion
             // 
